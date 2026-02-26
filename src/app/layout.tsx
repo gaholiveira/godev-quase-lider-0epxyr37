@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 import './globals.css';
 
 const inter = Inter({
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={inter.variable}>
-      <body className="min-h-screen overflow-x-hidden bg-slate-950 font-sans antialiased">{children}</body>
+      <body className="min-h-screen overflow-x-hidden bg-slate-950 font-sans antialiased">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }
