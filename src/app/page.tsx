@@ -21,7 +21,7 @@ export default function Page() {
           subtitle="Junte-se a milhares de líderes que já alcançaram alta performance com nossos cursos, mentorias e palestras exclusivas."
           ctaText="Comece Agora"
           ctaHref="#product"
-          backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+          backgroundImage="https://imglur.com/get/zhMgPn.png?v=268518186"
           countdownTarget={countdownTarget}
         />
         <SocialProofBar
