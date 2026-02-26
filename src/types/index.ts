@@ -48,3 +48,8 @@ export interface HeroSectionProps {
   ctaHref?: string;
   backgroundImage?: string;
 }
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
