@@ -51,8 +51,8 @@ export function FAQSection({
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
-    <section className="border-t border-slate-800 bg-slate-950 py-24">
-      <div className="mx-auto max-w-4xl px-4">
+    <section className="border-t border-slate-800 bg-slate-950 py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,10 +60,10 @@ export function FAQSection({
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">{title}</h2>
-          <p className="mt-4 text-lg text-slate-400">{subtitle}</p>
+          <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">{title}</h2>
+          <p className="mt-3 text-base text-slate-400 sm:mt-4 sm:text-lg">{subtitle}</p>
         </motion.div>
-        <div className="mt-12 space-y-4">
+        <div className="mt-8 space-y-3 sm:mt-12 sm:space-y-4">
           {items.map((item, i) => (
             <motion.div
               key={i}
@@ -76,11 +76,11 @@ export function FAQSection({
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 p-6 text-left transition-colors hover:bg-slate-800/50"
+                className="flex min-h-[44px] w-full items-center justify-between gap-3 p-4 text-left transition-colors hover:bg-slate-800/50 sm:gap-4 sm:p-6"
               >
-                <span className="text-lg font-semibold text-white">{item.question}</span>
+                <span className="text-sm font-semibold text-white sm:text-base lg:text-lg">{item.question}</span>
                 <ChevronDown
-                  className={`size-5 shrink-0 text-leadership-blue-light transition-transform duration-200 ${openIndex === i ? 'rotate-180' : ''}`}
+                  className={`size-4 shrink-0 text-leadership-blue-light transition-transform duration-200 sm:size-5 ${openIndex === i ? 'rotate-180' : ''}`}
                 />
               </button>
               <AnimatePresence>
@@ -92,7 +92,7 @@ export function FAQSection({
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="border-t border-slate-800 px-6 py-4 text-slate-300">{item.answer}</div>
+                    <div className="border-t border-slate-800 px-4 py-3 text-sm text-slate-300 sm:px-6 sm:py-4 sm:text-base">{item.answer}</div>
                   </motion.div>
                 )}
               </AnimatePresence>
