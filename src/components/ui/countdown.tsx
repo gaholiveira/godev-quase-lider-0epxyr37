@@ -42,13 +42,13 @@ export function Countdown({ targetDate }: CountdownProps) {
     { label: 'Seg', value: timeLeft.seconds },
   ];
   return (
-    <div className="flex items-center justify-center gap-3 sm:gap-4">
+    <div className="flex items-center justify-center gap-2 sm:gap-3 lg:gap-4">
       {units.map((unit, i) => (
         <div key={i} className="flex flex-col items-center">
-          <div className="flex size-14 items-center justify-center rounded-lg border border-leadership-orange/30 bg-slate-900/80 text-2xl font-bold text-white backdrop-blur-sm sm:size-16 sm:text-3xl">
+          <div className="flex size-12 items-center justify-center rounded-lg border border-leadership-orange/30 bg-slate-900/80 text-xl font-bold text-white backdrop-blur-sm sm:size-14 sm:text-2xl lg:size-16 lg:text-3xl">
             {String(unit.value).padStart(2, '0')}
           </div>
-          <span className="mt-2 text-xs font-medium text-slate-400 sm:text-sm">{unit.label}</span>
+          <span className="mt-1 text-xs font-medium text-slate-400 sm:mt-2 sm:text-sm">{unit.label}</span>
         </div>
       ))}
     </div>
