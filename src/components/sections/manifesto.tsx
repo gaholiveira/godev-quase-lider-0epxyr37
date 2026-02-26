@@ -12,14 +12,14 @@ export function ManifestoSection({
   content = 'Acreditamos que todo empreendedor merece acesso a ferramentas e estratégias de classe mundial. Nossa missão é democratizar o sucesso fornecendo soluções premium que antes estavam disponíveis apenas para empresas Fortune 500.',
 }: ManifestoSectionProps) {
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-4xl px-4">
+    <section className="py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-3xl font-bold text-white sm:text-4xl"
+          className="text-center text-2xl font-bold text-white sm:text-3xl lg:text-4xl"
         >
           {title}
         </motion.h2>
@@ -28,9 +28,9 @@ export function ManifestoSection({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8 rounded-xl border border-leadership-blue/50 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-8 shadow-lg shadow-leadership-blue/10 backdrop-blur-sm sm:p-12"
+          className="mt-6 rounded-xl border border-leadership-blue/50 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-6 shadow-lg shadow-leadership-blue/10 backdrop-blur-sm sm:mt-8 sm:p-8 lg:p-12"
         >
-          <p className="text-lg leading-relaxed text-slate-200">{content}</p>
+          <p className="text-base leading-relaxed text-slate-200 sm:text-lg">{content}</p>
         </motion.div>
       </div>
     </section>
