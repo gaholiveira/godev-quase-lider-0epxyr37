@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --leadership-blue: #1e40af;
+  --leadership-blue-light: #3b82f6;
+  --leadership-orange: #ea580c;
+  --leadership-orange-light: #f97316;
+  --leadership-gold: #d97706;
+  --leadership-gold-light: #fbbf24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+}
