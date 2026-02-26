@@ -6,9 +6,11 @@ import { ManifestoSection } from '@/components/sections/manifesto';
 import { AboutMentor } from '@/components/sections/about-mentor';
 import { ProductShowcase } from '@/components/sections/product-showcase';
 import { TestimonialsSection } from '@/components/sections/testimonials';
+import { FAQSection } from '@/components/sections/faq';
 import { Zap } from 'lucide-react';
 
 export default function Page() {
+  const countdownTarget = new Date('2025-02-28T23:59:59');
   return (
     <>
       <Navbar />
@@ -20,6 +22,7 @@ export default function Page() {
           ctaText="Comece Agora"
           ctaHref="#product"
           backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+          countdownTarget={countdownTarget}
         />
         <SocialProofBar
           items={[
@@ -94,12 +97,19 @@ export default function Page() {
             },
           ]}
         />
+        <FAQSection />
         <section className="border-t border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900 py-24">
           <div className="mx-auto max-w-6xl px-4 text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">Pronto para Transformar Sua Liderança?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
               Junte-se aos líderes de sucesso que já deram o salto. Seu eu do futuro agradecerá.
             </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-400">
+              <svg className="size-5 text-leadership-gold-light" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="font-medium">Garantia incondicional de 30 dias ou seu dinheiro de volta</span>
+            </div>
             <a
               href="#product"
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-leadership-orange to-leadership-orange-light px-8 py-4 text-base font-semibold text-white shadow-lg shadow-leadership-orange/30 transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:shadow-leadership-orange/50 active:scale-95"
