@@ -24,4 +24,23 @@ html {
 
 body {
   font-family: var(--font-inter);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  body {
+    cursor: auto;
+  }
+}
+
+a,
+button {
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  a,
+  button {
+    cursor: pointer;
+  }
 }
